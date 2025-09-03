@@ -14,8 +14,8 @@
     "pdfkit": "^0.13.0",
     "uuid": "^9.0.0",
     "node-fetch": "^2.6.7",
-    "@supabase/supabase-js": "^2.35.0"
-  },
+    "@supabase/supabase-js": "^2.35.0",
+ "dotenv": "^16.0.3" },
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
