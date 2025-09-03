@@ -13,7 +13,9 @@ require('dotenv').config();
 const app = express();
 
 // Validate required environment variables
-const requiredEnvVars = ['SUPABASE_URL', 'SUPABASE_SERVICE_KEY', 'PAYSTACK_SECRET'];
+const requiredEnvVars = ['https://sefkfzwfeniaogybprtk.supabase.co
+', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlZmtmendmZW5pYW9neWJwcnRrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1Njg1MDM2MSwiZXhwIjoyMDcyNDI2MzYxfQ.P0W3zziakvXj2c-gGvqFA9a6vNbvQFiu_DgpivUzED', 'sk_test_7ca45938f4d431558c239dc9313f52d0bfbcddc9
+'];
 for (const envVar of requiredEnvVars) {
   if (!process.env[envVar]) {
     console.error(`ERROR: Missing required environment variable: ${envVar}`);
@@ -32,10 +34,13 @@ app.use(cors({
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 4000;
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
-const PAYSTACK_SECRET = process.env.PAYSTACK_SECRET;
-const PAYSTACK_WEBHOOK_SECRET = process.env.PAYSTACK_WEBHOOK_SECRET;
+const SUPABASE_URL = process.env.https://sefkfzwfeniaogybprtk.supabase.co
+;
+const SUPABASE_SERVICE_KEY = process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNlZmtmendmZW5pYW9neWJwcnRrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1Njg1MDM2MSwiZXhwIjoyMDcyNDI2MzYxfQ.P0W3zziakvXj2c-gGvqFA9a6vNbvQFiu_DgpivUzEDk;
+const PAYSTACK_SECRET = process.env.sk_test_7ca45938f4d431558c239dc9313f52d0bfbcddc9
+;
+const PAYSTACK_WEBHOOK_SECRET = process.env.sk_test_7ca45938f4d431558c239dc9313f52d0bfbcddc9
+;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
